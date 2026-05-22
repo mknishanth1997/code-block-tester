@@ -15,7 +15,7 @@ export default function Home() {
 }
   .parent > p {
   color: red;
-  border: 1px solid red;
+  border: 1px solid red ;
 }
   .parent > p {
   color: red;

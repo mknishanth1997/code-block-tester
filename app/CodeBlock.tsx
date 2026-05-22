@@ -18,7 +18,7 @@ const HIGHLIGHTER_THEME = {
   custom: {
     margin: 0,
     padding: "1.5rem 0",
-    background: "#18181b",
+    background: "#111827",
     fontSize: "14px",
   },
   lineNumbers: {
@@ -92,7 +92,7 @@ export default function CodeBlock({
       }`}
     >
       {/* HEADER */}
-      <div className="mb-4 flex items-center justify-between border-b border-zinc-700 pb-3">
+      <div className="mb-4 flex items-center justify-between border-b border-zinc-700/60 pb-3">
         {/* LEFT */}
         <div className="flex items-center gap-4">
           {/* WINDOW CONTROLS */}
@@ -116,7 +116,12 @@ export default function CodeBlock({
       </div>
 
       {/* CODE SCREEN */}
-      <div className="max-h-[200px] overflow-auto rounded-2xl border border-zinc-800">
+      <div
+        className="max-h-[280px] overflow-auto rounded-2xl border border-zinc-800 scrollbar-thin
+scrollbar-thumb-zinc-700
+scrollbar-track-transparent
+hover:scrollbar-thumb-zinc-600"
+      >
         <div
           className={`transition-all duration-200 ${
             isChanging ? "opacity-0 translate-y-1" : "opacity-100 translate-y-0"
@@ -137,14 +142,14 @@ export default function CodeBlock({
                   display: "block",
                   width: "100%",
                   paddingLeft: "1.5rem",
-                  paddingRight: "1.5rem",
+                  paddingRight: "2rem",
 
                   backgroundColor: isHighlighted
-                    ? "rgba(245, 158, 11, 0.08)"
+                    ? "rgba(59, 130, 246, 0.10)"
                     : "transparent",
 
                   borderLeft: isHighlighted
-                    ? "4px solid #f59e0b"
+                    ? "4px solid #3b82f6"
                     : "4px solid transparent",
 
                   transition:
